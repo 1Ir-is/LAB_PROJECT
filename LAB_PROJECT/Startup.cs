@@ -40,7 +40,7 @@ namespace LAB_PROJECT
             services.AddSingleton<IMongoDatabase>(provider =>
             {
                 var settings = provider.GetRequiredService<IOptions<MongoDbSettings>>().Value;
-                var client = new MongoClient("mongodb+srv://mhuynk1005:mhuynk1005@cluster0.oclhu9t.mongodb.net/?retryWrites=true&w=majority");
+                var client = new MongoClient("Yourdatabasename");
                 return client.GetDatabase("lab_project");
             });
 
